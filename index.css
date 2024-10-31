@@ -1,0 +1,110 @@
+/* RWD */
+@media (max-width: 768px) {
+    .img-card {
+        margin-left: 15%;
+        max-width: 70%;
+    }
+    #chirp {
+        margin-left: 35%;
+        max-width: 50%;
+        cursor: pointer;
+    }
+    #ice {
+        margin-left: 10%;
+        max-width: 50%;
+        cursor: pointer;
+    }
+    #graal {
+        width: 20%;
+        animation-fill-mode: forwards;
+    }
+    h6 {
+        margin-left: 20%;
+    }
+}
+@media (min-width: 768px) {
+    .img-card {
+        margin-left: 25%;
+        max-width: 45%;
+    }
+    #chirp {
+        margin-left: 70%;
+        max-width: 25%;
+        cursor: pointer;
+    }
+    #ice {
+        margin-left: 10%;
+        max-width: 25%;
+        cursor: pointer;
+    }
+    #graal {
+        width: 10%;
+        animation-fill-mode: forwards;
+    }
+    h6 {
+        margin-left: 10%;
+    }
+}
+
+/* 網頁背景圖 */
+html {
+    height: 100%;
+}
+body {
+    background-image: url(./img/background.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+table {
+    width: 100%;
+}
+
+/* 開場動畫特效 */
+@keyframes opening1 {
+    from {
+        margin-top: 0%;
+    }
+    to {
+        margin-top: -200%;
+    }
+}
+@keyframes opening2 {
+    0% {
+        top: 100%;
+        left: 100%;
+    }
+    25% {
+        top: 50%;
+        left: 50%;
+    }
+    100% {
+        top: 5px;
+        left: 0px;
+    }
+}
+
+.specialEfficacy1 {
+    position: absolute;
+    animation-name: opening1;
+    animation-duration: 7s;
+}
+.specialEfficacy2 {
+    position: absolute;
+    animation-name: opening1;
+    animation-duration: 8s;
+}
+.specialEfficacy3 {
+    position: absolute;
+    animation-name: opening2;
+    animation-duration: 4s;
+}
+#ribbons {
+    width: 100%;
+    animation-fill-mode: forwards;
+}
+#feather {
+    width: 100%;
+    animation-fill-mode: forwards;
+}
