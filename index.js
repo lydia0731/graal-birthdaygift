@@ -20,14 +20,42 @@ function toastClose(){
 }
 
 // 顯示賀卡
-let cardNum = 2; //賀卡數量
+let cardNum = 41; //賀卡數量
 let cardNo = 1; //目前賀卡編號
 function greetingCard(){
     if(cardNo <= cardNum) {
         window.clearTimeout(Timefunction);
-        document.getElementById('imgCard').src = `./img/Carousel/card-${cardNo}.jpg`;
+        document.getElementById('imgCard').src = `./img/Carousel/card-${cardNo}.png`;
         cardNo += 1;
         window.setTimeout(Timefunction,2000);
+    } else {
+        document.getElementById('imgCard').src = './img/happyBirthday.png';
+        cardNo = 1;
+    }
+    window.scrollTo(0,0);
+}
+
+function home(){
+    document.getElementById('imgCard').src = './img/happyBirthday.png';
+    cardNo = 1;
+}
+
+// 更換上/下一張投影片(哭啊!沒時間寫啦!!)
+function next(){
+    if(cardNo <= cardNum) {
+        window.clearTimeout(Timefunction);
+        document.getElementById('imgCard').src = `./img/Carousel/card-${cardNo}.png`;
+        cardNo += 1;
+    } else {
+        document.getElementById('imgCard').src = './img/happyBirthday.png';
+        cardNo = 1;
+    }
+}
+function comeback(){
+    if(cardNo <= cardNum && cardNo > 1) {
+        window.clearTimeout(Timefunction);
+        document.getElementById('imgCard').src = `./img/Carousel/card-${cardNo}.png`;
+        cardNo -= 1;
     } else {
         document.getElementById('imgCard').src = './img/happyBirthday.png';
         cardNo = 1;
